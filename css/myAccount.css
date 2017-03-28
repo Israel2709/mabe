@@ -1,0 +1,40 @@
+.title-account{
+	background: url(../img/title-account.png) center center no-repeat;
+}
+
+.title-bar.title-account{
+	margin-bottom: 20px;
+}
+
+.page-static h3.title{
+	margin: 0px 0 30px 0;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #7f7f7f;
+    padding: 20px 5px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.general-table{
+	margin-top: 40px;
+}
+
+.general-table th{
+	color: white;
+	background: #13495d;
+	font-size: 16px;
+}
+
+.general-table td{
+	vertical-align: middle;
+}
+
+.general-table .btn-success{
+	display: block;
+    border-radius: 20px;
+    background: none;
+    border: none;
+    background: #3D794C;
+    border: #3D794C;
+}

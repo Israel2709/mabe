@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mabe</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="top-header">
+				<div class="container">
+					<div class="row">
+						<a href="tel:014614717000">Contacto 01 461 47 17000</a> <span class="hidden-xs">|</span> 
+						<a href="javascript:void(0);">Centro de servicios</a> <span class="hidden-xs">|</span> 
+						<a href="javascript:void(0);">Garant&iacute;as</a>
+					</div>
+				</div>
+			</div>
+			<div class="middle-header">
+				<div class="container">
+					<div class="row">
+						<nav class="navbar navbar-default">
+							<div class="container-fluid">
+								<div class="logo"></div>
+								<input class="search hidden-xs hidden-sm" type="text" placeholder="B&uacute;squeda de refacciones y accesorios por: marca, modelo o palabra calve">
+								<div class="login hidden-xs">
+									<!-- <button class="btn btn-blue">Entrar / Registro</button> -->
+									<a href="javascript:void(0):" class="user">Andrea Buend&iacute;a <img src="img/img-user.png"></a>
+								</div>
+								<button class="btn-cart hidden-sm hidden-xs" onclick="show_cart(this);"><span>3</span></button>
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<div class="collapse navbar-collapse" id="main-menu">
+									<ul class="nav navbar-nav visible-xs-block hidden-sm hidden-md hidden-lg">
+										<li class="dropdown">
+											<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+												Refacciones y accesorios <span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu">
+												<li><p><img src="img/menu-coccion.png"> Cocci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Caj&oacute;n Calientaplatos</a></li>
+												<li><a href="javascript:void(0);">Campanas</a></li>
+												<li><a href="javascript:void(0);">Estufas</a></li>
+												<li><a href="javascript:void(0);">Hornos</a></li>
+												<li><a href="javascript:void(0);">Hornos Tostadores</a></li>
+												<li><a href="javascript:void(0);">Microondas</a></li>
+												<li><a href="javascript:void(0);">Parrillas</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-refrigeracion.png"> Refrigeraci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Cavas de vinos</a></li>
+												<li><a href="javascript:void(0);">Congeladores</a></li>
+												<li><a href="javascript:void(0);">Despachadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Frigobares</a></li>
+												<li><a href="javascript:void(0);">Refrigeradores</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-cuidadoropa.png"> Cuidado de la ropa</p></li>
+												<li><a href="javascript:void(0);">Centros de Lavado</a></li>
+												<li><a href="javascript:void(0);">Lavadoras</a></li>
+												<li><a href="javascript:void(0);">Lavasecadoras</a></li>
+												<li><a href="javascript:void(0);">Secadoras</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-parahogar.png"> M&aacute;s para el hogar</p></li>
+												<li><a href="javascript:void(0);">Aires Acondicionados</a></li>
+												<li><a href="javascript:void(0);">Calentadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Lavavajillas</a></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+												Servicio y reparaci&oacute;n <span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu">
+												<li><p><img src="img/menu-coccion.png"> Cocci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Caj&oacute;n Calientaplatos</a></li>
+												<li><a href="javascript:void(0);">Campanas</a></li>
+												<li><a href="javascript:void(0);">Estufas</a></li>
+												<li><a href="javascript:void(0);">Hornos</a></li>
+												<li><a href="javascript:void(0);">Hornos Tostadores</a></li>
+												<li><a href="javascript:void(0);">Microondas</a></li>
+												<li><a href="javascript:void(0);">Parrillas</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-refrigeracion.png"> Refrigeraci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Cavas de vinos</a></li>
+												<li><a href="javascript:void(0);">Congeladores</a></li>
+												<li><a href="javascript:void(0);">Despachadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Frigobares</a></li>
+												<li><a href="javascript:void(0);">Refrigeradores</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-cuidadoropa.png"> Cuidado de la ropa</p></li>
+												<li><a href="javascript:void(0);">Centros de Lavado</a></li>
+												<li><a href="javascript:void(0);">Lavadoras</a></li>
+												<li><a href="javascript:void(0);">Lavasecadoras</a></li>
+												<li><a href="javascript:void(0);">Secadoras</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-parahogar.png"> M&aacute;s para el hogar</p></li>
+												<li><a href="javascript:void(0);">Aires Acondicionados</a></li>
+												<li><a href="javascript:void(0);">Calentadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Lavavajillas</a></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+												Extenci&oacute;n de garant&iacute;a <span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu">
+												<li><p><img src="img/menu-coccion.png"> Cocci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Caj&oacute;n Calientaplatos</a></li>
+												<li><a href="javascript:void(0);">Campanas</a></li>
+												<li><a href="javascript:void(0);">Estufas</a></li>
+												<li><a href="javascript:void(0);">Hornos</a></li>
+												<li><a href="javascript:void(0);">Hornos Tostadores</a></li>
+												<li><a href="javascript:void(0);">Microondas</a></li>
+												<li><a href="javascript:void(0);">Parrillas</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-refrigeracion.png"> Refrigeraci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Cavas de vinos</a></li>
+												<li><a href="javascript:void(0);">Congeladores</a></li>
+												<li><a href="javascript:void(0);">Despachadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Frigobares</a></li>
+												<li><a href="javascript:void(0);">Refrigeradores</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-cuidadoropa.png"> Cuidado de la ropa</p></li>
+												<li><a href="javascript:void(0);">Centros de Lavado</a></li>
+												<li><a href="javascript:void(0);">Lavadoras</a></li>
+												<li><a href="javascript:void(0);">Lavasecadoras</a></li>
+												<li><a href="javascript:void(0);">Secadoras</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-parahogar.png"> M&aacute;s para el hogar</p></li>
+												<li><a href="javascript:void(0);">Aires Acondicionados</a></li>
+												<li><a href="javascript:void(0);">Calentadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Lavavajillas</a></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+												Registra tu producto <span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu">
+												<li><p><img src="img/menu-coccion.png"> Cocci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Caj&oacute;n Calientaplatos</a></li>
+												<li><a href="javascript:void(0);">Campanas</a></li>
+												<li><a href="javascript:void(0);">Estufas</a></li>
+												<li><a href="javascript:void(0);">Hornos</a></li>
+												<li><a href="javascript:void(0);">Hornos Tostadores</a></li>
+												<li><a href="javascript:void(0);">Microondas</a></li>
+												<li><a href="javascript:void(0);">Parrillas</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-refrigeracion.png"> Refrigeraci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Cavas de vinos</a></li>
+												<li><a href="javascript:void(0);">Congeladores</a></li>
+												<li><a href="javascript:void(0);">Despachadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Frigobares</a></li>
+												<li><a href="javascript:void(0);">Refrigeradores</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-cuidadoropa.png"> Cuidado de la ropa</p></li>
+												<li><a href="javascript:void(0);">Centros de Lavado</a></li>
+												<li><a href="javascript:void(0);">Lavadoras</a></li>
+												<li><a href="javascript:void(0);">Lavasecadoras</a></li>
+												<li><a href="javascript:void(0);">Secadoras</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-parahogar.png"> M&aacute;s para el hogar</p></li>
+												<li><a href="javascript:void(0);">Aires Acondicionados</a></li>
+												<li><a href="javascript:void(0);">Calentadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Lavavajillas</a></li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+												Consultar tu orden de servicio <span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu">
+												<li><p><img src="img/menu-coccion.png"> Cocci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Caj&oacute;n Calientaplatos</a></li>
+												<li><a href="javascript:void(0);">Campanas</a></li>
+												<li><a href="javascript:void(0);">Estufas</a></li>
+												<li><a href="javascript:void(0);">Hornos</a></li>
+												<li><a href="javascript:void(0);">Hornos Tostadores</a></li>
+												<li><a href="javascript:void(0);">Microondas</a></li>
+												<li><a href="javascript:void(0);">Parrillas</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-refrigeracion.png"> Refrigeraci&oacute;n</p></li>
+												<li><a href="javascript:void(0);">Cavas de vinos</a></li>
+												<li><a href="javascript:void(0);">Congeladores</a></li>
+												<li><a href="javascript:void(0);">Despachadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Frigobares</a></li>
+												<li><a href="javascript:void(0);">Refrigeradores</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-cuidadoropa.png"> Cuidado de la ropa</p></li>
+												<li><a href="javascript:void(0);">Centros de Lavado</a></li>
+												<li><a href="javascript:void(0);">Lavadoras</a></li>
+												<li><a href="javascript:void(0);">Lavasecadoras</a></li>
+												<li><a href="javascript:void(0);">Secadoras</a></li>
+												<li role="separator" class="divider"></li>
+												<li><p><img src="img/menu-parahogar.png"> M&aacute;s para el hogar</p></li>
+												<li><a href="javascript:void(0);">Aires Acondicionados</a></li>
+												<li><a href="javascript:void(0);">Calentadores de Agua</a></li>
+												<li><a href="javascript:void(0);">Lavavajillas</a></li>
+											</ul>
+										</li>
+										<!-- <li><a href="javascript:void(0);">Entrar / Registro</a></li> -->
+										<li><a href="javascript:void(0);"><img src="img/img-user.png"> Andrea Buend&iacute;a</a></li>
+									</ul>
+								</div>
+
+								
+								
+							</div>
+						</nav>
+						
+					</div>
+					<div class="row visible-xs-block visible-sm-block">
+						<input class="search search-sm" type="text" placeholder="B&uacute;squeda de refacciones y accesorios por: marca, modelo o palabra calve">
+						<button class="btn-cart marginT20" onclick="show_cart(this);"><span>3</span></button>
+					</div>
+				</div>	
+			</div>
+			<div class="bottom-header hidden-xs">
+				<div class="main-menu">
+					<div class="container">
+						<a href="javascript:void(0);" data-option="option-refaccionesaccesorios">Refacciones y accesorios</a>
+						<a href="javascript:void(0);" data-option="option-refaccionesaccesorios">Servicio y reparaci&oacute;n</a>
+						<a href="javascript:void(0);" data-option="option-refaccionesaccesorios">Extenci&oacute;n de garant&iacute;a</a>
+						<a href="javascript:void(0);" data-option="option-refaccionesaccesorios">Registra tu producto</a>
+						<a href="javascript:void(0);" data-option="option-refaccionesaccesorios">Consultar tu orden de servicio</a>
+					</div>
+				</div>
+				<div class="menu-options">
+					<div class="container">
+						<div class="row option option-refaccionesaccesorios">
+							<div class="column">
+								<p><img src="img/menu-coccion.png"> Cocci&oacute;n</p>
+								<a href="javascript:void(0);">Caj&oacute;n Calientaplatos</a>
+								<a href="javascript:void(0);">Campanas</a>
+								<a href="javascript:void(0);">Estufas</a>
+								<a href="javascript:void(0);">Hornos</a>
+								<a href="javascript:void(0);">Hornos Tostadores</a>
+								<a href="javascript:void(0);">Microondas</a>
+								<a href="javascript:void(0);">Parrillas</a>
+							</div>
+							<div class="column">
+								<p><img src="img/menu-refrigeracion.png"> Refrigeraci&oacute;n</p>
+								<a href="javascript:void(0);">Cavas de vinos</a>
+								<a href="javascript:void(0);">Congeladores</a>
+								<a href="javascript:void(0);">Despachadores de Agua</a>
+								<a href="javascript:void(0);">Frigobares</a>
+								<a href="javascript:void(0);">Refrigeradores</a>
+							</div>
+							<div class="column">
+								<p><img src="img/menu-cuidadoropa.png"> Cuidado de la ropa</p>
+								<a href="javascript:void(0);">Centros de Lavado</a>
+								<a href="javascript:void(0);">Lavadoras</a>
+								<a href="javascript:void(0);">Lavasecadoras</a>
+								<a href="javascript:void(0);">Secadoras</a>
+							</div>
+							<div class="column">
+								<p><img src="img/menu-parahogar.png"> M&aacute;s para el hogar</p>
+								<a href="javascript:void(0);">Aires Acondicionados</a>
+								<a href="javascript:void(0);">Calentadores de Agua</a>
+								<a href="javascript:void(0);">Lavavajillas</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="shopping-cart">
+			<div class="arrow arrow-center"></div>
+			<div class="arrow arrow-right"></div>
+			<div class="item">
+				<div class="img">
+					<img src="img/img-cart.png">
+				</div>
+				<div class="description">
+					<p class="name">Control de m&aacute;quina de lavado</p>
+					<p class="code">AKNCD913JDJ9LD0</p>
+					<p class="price">
+						<span>$</span>345<span>00</span> 
+					</p>
+					<p class="quantity">
+						Cantidad: <input type="tel" value="1">
+					</p>
+					<p class="availability green">Disponible</p>
+				</div>
+				<div class="options">
+					<button class="btn-close"></button>
+				</div>
+			</div>
+			<div class="item">
+				<div class="img">
+					<img src="img/img-cart.png">
+				</div>
+				<div class="description">
+					<p class="name">Control de m&aacute;quina de lavado</p>
+					<p class="code">AKNCD913JDJ9LD0</p>
+					<p class="price">
+						<span>$</span>345<span>00</span> 
+					</p>
+					<p class="quantity">
+						Cantidad: <input type="tel" value="1">
+					</p>
+					<p class="availability green">Disponible</p>
+				</div>
+				<div class="options">
+					<button class="btn-close"></button>
+				</div>
+			</div>
+			<div class="item last-child">
+				<div class="img">
+					<img src="img/img-cart.png">
+				</div>
+				<div class="description">
+					<p class="name">Control de m&aacute;quina de lavado</p>
+					<p class="code">AKNCD913JDJ9LD0</p>
+					<p class="price">
+						<span>$</span>345<span>00</span> 
+					</p>
+					<p class="quantity">
+						Cantidad: <input type="tel" value="1">
+					</p>
+					<p class="availability green">Disponible</p>
+				</div>
+				<div class="options">
+					<button class="btn-close"></button>
+				</div>
+			</div>
+			<div class="totals">
+				<p class="total-label">Subtotal:</p>
+				<p class="amount"><span>$</span>1,035<span>00</span> </p>
+			</div>
+			<div class="buttons">
+				<a href="javascript:void(0);" class="btn btn-blue">Ver carrito</a>
+				<button class="btn btn-green">Proceder al pago</button>
+			</div>
+		</div>
+
+		<div class="page-home">
+			<div class="top-home">
+				<div class="container">
+					<h1>Serviplus, encontramos las soluciones<br>para tu tipo de producto</h1>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="actions">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="row">
+								<div class="col-md-2 col-sm-4 action">
+									<a href="javascript:void(0)"><img src="img/logo-color-mabe.png"></a>
+								</div>
+								<div class="col-md-2 col-sm-4 action">
+									<a href="javascript:void(0)"><img src="img/logo-color-iomabe.png"></a>
+								</div>
+								<div class="col-md-2 col-sm-4 action">
+									<a href="javascript:void(0)"><img src="img/logo-color-geappliances.png"></a>
+								</div>
+								<div class="col-md-2 col-sm-4 action">
+									<a href="javascript:void(0)"><img src="img/logo-color-profile.png"></a>
+								</div>
+								<div class="col-md-2 col-sm-4 action">
+									<a href="javascript:void(0)"><img src="img/logo-color-monogram.png"></a>
+								</div>
+								<div class="col-md-1 col-sm-4 action">
+									<a href="javascript:void(0)"><img src="img/logo-color-easy.png"></a>
+								</div>
+								<div class="col-md-1 col-sm-12 action">
+									<a href="javascript:void(0)"><img src="img/logo-color-iem.png"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="box-home text-center">
+							<h1>Registra tu producto y encuentra una soluci&oacute;n</h1>
+							<div class="row">
+								<div class="col-md-6 text-registra">
+									<p>Accede de inmediato a videos, manuales y consejos &uacute;tiles de tu producto</p>
+									<input type="text" placeholder="Ingresa el n&uacute;mero de modelo">
+									<a href="javascript:void(0)" class="link text-right">
+										&iquest;C&oacute;mo encontrar mi n&uacute;mero de modelo?
+									</a>
+									<a href="javascript:void(0);" class="btn btn-green">Registrar producto</a>
+								</div>
+								<div class="col-md-6 text-problema">
+									<p>Si tienes alg&uacute;n problema con tu producto tambi&eacute;n puedes:</p>
+									<a href="javascript:void(0);" class="btn btn-green">
+										<img src="img/ico-solicitaservicio.png">
+										Solicitar un servicio
+									</a>
+									<a href="javascript:void(0);" class="btn btn-green">
+										<img src="img/ico-descargamanuales.png">
+										Descargar manuales
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="box-home text-center">
+							<h1>Encuentra una soluci&oacute;n</h1>
+							<p>
+								Solicita servicio en l&iacute;nea o consulta los problemas m&aacute;s frecuentes en el uso de nuestros productos.
+							</p>
+
+							<div class="row">
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-energia">Energ&iacute;a</a>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-especificaciones">Especificaciones</a>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-operacion">Operaci&iacute;n</a>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-software">Software</a>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-error">Error</a>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-instalacion">Instalaci&oacute;n</a>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-ruido">Ruido</a>
+								</div>
+								<div class="col-sm-3 col-xs-6">
+									<a href="javascript:void(0);" class="link-solucion ico-otros">Otros</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bottom-options">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 option">
+						<img src="img/ico-serviciotecnico.png">
+						<h1>Servicio Remoto</h1>
+						<p>
+							Permite que uno de nuestros t&eacute;cnicos especializados te brinde asesor&iacute;a para ayudarte a resolver alg&uacute;n problema.
+						</p>
+						<a href="javascript:void(0)" class="btn btn-blue">Pedir servicio</a>
+					</div>
+					<div class="col-md-4 option">
+						<img src="img/ico-localizador.png">
+						<h1>Localizador de Centros de servicio</h1>
+						<p>
+							Visita nuestros Centros de Servicio Autorizados y obt&eacute;n un servicio pr&aacute;ctico.
+						</p>
+						<a href="javascript:void(0)" class="btn btn-blue">Ver localizador</a>
+					</div>
+					<div class="col-md-4 option">
+						<img src="img/ico-consultaorden.png">
+						<h1>Consulta de orden de servicio</h1>
+						<p>
+							Solicita Servicio en L&iacute;nea y consulta el estado de la reparaci&oacute;n de tu producto desde la comodidad de tu casa.
+						</p>
+						<a href="javascript:void(0)" class="btn btn-blue">Dar seguimiento</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="top-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<h2>&iquest;En qu&eacute; podemos ayudarte?</h2>
+							<div class="help-button">
+								<div class="ico-chat"></div>
+								<p>Escr&iacute;benos de Lunes a Viernes de 8:00 AM a 7:00 PM</p>
+								<a href="javascript:void(0);">Chat, iniciar conversaci&oacute;n</a>
+							</div>
+							<div class="help-button">
+								<div class="ico-tel"></div>
+								<p>M&aacute;rcanos</p>
+								<a href="tel:52271000">5227 1000</a><br>
+								<a href="tel:014614717000">01 46147 17000</a>
+							</div>
+							<div class="help-button">
+								<div class="ico-mail"></div>
+								<p>Env&iacute;a un correo electr&oacute;nico</p>
+								<a href="mailto:mabeservicio@mabe.com.mx">mabeservicio@mabe.com.mx</a>
+							</div>
+							<div class="help-button">
+								<div class="ico-location"></div>
+								<p>Localiza los centros de servicio</p>
+								<a href="javascript:void(0);">Ver mapa</a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<h2>Nosotros</h2>
+							<a class="link" href="javascript:void(0);">&iquest;Qui&eacute;nes somos?</a>
+							<a class="link" href="javascript:void(0);">Preguntas frecuentes</a>
+							<a class="link" href="javascript:void(0);">Pol&iacute;ticas de privacidad</a>
+							<a class="link" href="javascript:void(0);">T&eacute;rminos y condiciones</a>
+
+							<h2>M&eacute;todos de pago</h2>
+							<a class="link" href="javascript:void(0);">Visa, Master Card, American Express</a>
+							<a class="link" href="javascript:void(0);">Seven Eleven</a>
+							<a class="link" href="javascript:void(0);">Oxxo</a>
+						</div>
+						<div class="col-md-4">
+							<h2>Nuestras marcas</h2>
+							<div class="row">
+								<div class="col-xs-5">
+									<img src="img/logo-mabe.png" class="img img-responsive">
+								</div>
+								<div class="col-xs-5">
+									<img src="img/logo-iomabe.png" class="img img-responsive">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-5">
+									<img src="img/logo-geappliances.png" class="img img-responsive">
+								</div>
+								<div class="col-xs-5">
+									<img src="img/logo-profile.png" class="img img-responsive">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<img src="img/logo-monogram.png" class="img img-responsive">
+								</div>
+								<div class="col-xs-3">
+									<img src="img/logo-easy.png" class="img img-responsive">
+								</div>
+								<div class="col-xs-4">
+									<img src="img/logo-iem.png" class="img img-responsive">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-footer">
+				<div class="container">
+					<p>
+						&copy; TODOS LOS DERECHOS RESERVADOS MABE M&Eacute;XICO Paseo de las palmas 100, Col. Lomas de Chapultepec, M&eacute;xico Distrito Federal C&oacute;digo Postal: 11000
+					</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
