@@ -6,6 +6,7 @@ $(document).ready(function(){
 	$(".pageButton").click(function(){
 		$(".pageButton").removeClass("active");
 		$(this).addClass("active");
+		$(".table.general-table tr td").fadeOut(300).fadeIn(300)
 	});
 
 	$(".nextButton").click(function(){
@@ -14,6 +15,7 @@ $(document).ready(function(){
 		if(indice < 3){
 			$(".pageButton.active").next().addClass("active");
 			$( ".pageButton:eq("+indice+")").removeClass("active")
+			$(".table.general-table tr td").fadeOut(300).fadeIn(300)
 		}
 	});
 });
@@ -169,8 +171,4 @@ function hide_modal(){
 	$('.modal-box').fadeOut('fast',function(){
 		$('.overlay-blk').fadeOut();
 	});
-}
-
-function page_active(element){
-	console.log("activar")
 }
