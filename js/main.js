@@ -3,12 +3,18 @@ $(document).ready(function(){
 	labels();
 	calendar();
 
-	$(".pagination a").click(function(){
-		$(".pagination a").each(function(index){
-			$(this).removeClass();
-		});
-
+	$(".pageButton").click(function(){
+		$(".pageButton").removeClass("active");
 		$(this).addClass("active");
+	});
+
+	$(".nextButton").click(function(){
+		var indice = $(".pageButton.active").index();
+
+		if(indice < 3){
+			$(".pageButton.active").next().addClass("active");
+			$( ".pageButton:eq("+indice+")").removeClass("active")
+		}
 	});
 });
 
