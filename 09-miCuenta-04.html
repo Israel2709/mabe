@@ -375,51 +375,56 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1 data-form">
+				<div class="row page-solicitudservicio">
+					<div class="col-md-10 col-md-offset-1 form-area">
 						<div class="col-md-6">
-							<form>
-							  <div class="form-group">
-							    <label>Nombre</label>
-							    <input type="text" class="form-control" placeholder="Nombre" value="Andrea Buend&iacute;a">
-							  </div>
-							  <div class="form-group">
-							    <label for="">Correo elect&oacute;nico</label>
-							    <input type="email" class="form-control"  placeholder="Correo electr&oacute;nico" value="andrea@gmail.com">
-							  </div>
-							  <div class="form-group">
-							    <label for="">Tel&eacute;fono</label>
-							    <input type="text" class="form-control"  placeholder="Tel&eacute;fono" value="55 12345678">
-							  </div>
-							  
-							</form>
+							<label>
+								<span>Nombre</span>
+								<input type="text" value="Andrea Buend&iacute;a">
+							</label>
+							<label>
+								<span>Correo electr&oacute;nico</span>
+								<input type="text" value="andrea@gmail.com">
+							</label>
+							<label>
+								<span>Tel&eacute;fono</span>
+								<input type="text" value="55 1234 5678">
+							</label>
 						</div>
 						<div class="col-md-6">
-							<form>
-							  <div class="form-group">
-							    <label for="">M&eacute;todo de pago</label>
-							    <input type="text" class="form-control card-input" placeholder="M&eacute;todo de pago" value="**** **** **** 4321">
-							  </div>
-							  <div class="form-group">
-							    <label for="">Fecha de vencimiento</label>
-							    <input type="text" class="form-control"  placeholder="Fecha de vencimiento" value="10 / 2020">
-							  </div>
-							  <div class="form-group">
-							    <label for="">C&oacute;digo de seguridad (CVV)</label>
-							    <input type="password" class="form-control" placeholder="C&oacute;digo de seguridad (CVV)" value="487">
-							  </div>
-							  <div class="form-group">
-							    <label for="">Datos de facturaci&oacute;n</label>
-							    <input type="text" class="form-control"  placeholder="Datos de facturaci&oacute;n" value="AISU84011218W">
-							  </div>
-							  <div class="btn btn-green col-md-6">Submit</div>
-							  <div class="btn btn-green col-md-6">Submit</div>
-							</form>
+							<label class="card-number">
+								<span>M&eacute;todo de pago</span>
+								<input type="text" value="**** **** **** 4321">
+								<div class="input-btn card-type"></div>
+								<div class="input-btn card-bank"></div>
+								<div class="input-btn trash-btn"></div>
+							</label>
+							
+							<div class="card-data">
+								<label>
+									<span>Fecha de vencimiento*</span>
+									<input type="text" value="10 / 2020">
+								</label>
+								<label class="pull-right">
+									<span>C&oacute;digo de seguridad (CVV)</span>
+									<input type="password" value="487">
+								</label>
+								<a href="javascript:void(0)">Agregar otro m&eacute;todo de pago</a>
+							</div>
+							<label>
+								<span>Datos de facturaci&oacute;n</span>
+								<input type="text" value="AISU84011218W">
+							</label>
+							<div class="col-md-12">
+								<div class="buttons">
+									<button class="btn btn-blue">Regresar</button>
+									<button class="btn btn-green">Siguiente</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
 		</div>
 
 		<div class="footer">
@@ -507,5 +512,10 @@
 		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".page-solicitudservicio input").focus()
+			})
+		</script>
 	</body>
 </html>

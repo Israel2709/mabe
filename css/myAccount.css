@@ -30,6 +30,46 @@ table.general-table td{
 	vertical-align: middle !important;
 }
 
-.data-form{
-	margin-top:40px;
+.card-data{
+	width: 100%;
+}
+
+.card-data label{
+	width: 47% !important;
+}
+
+.card-number{
+	position: relative;
+}
+
+.card-number .input-btn{
+	position: absolute;
+}
+
+.card-number .input-btn.card-type{
+    bottom: 8px;
+    right: 40%;
+    width: 25px;
+    height: 15px;
+    background: url(../img/mastercard-ico.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.card-number .input-btn.card-bank{
+	bottom: 8px;
+    right: 25%;
+    width: 45px;
+    height: 18px;
+    background: url(../img/citi-ico.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.card-number .input-btn.trash-btn{
+    bottom: 10px;
+    right: 20px;
+    width: 13px;
+    height: 16px;
+    background: url(../img/trash-ico.png) no-repeat;
+    background-size: 100% 100%;
+	cursor: pointer;
 }
