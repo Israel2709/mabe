@@ -13,8 +13,8 @@ $(document).ready(function(){
 			console.log("1 a "+ lastNum +" de 20 ordenes");
 			text = "1 a "+ lastNum +" de 20 ordenes";
 		}else{
-			console.log(firstNum + " a " + lastNum + " de 20 ordenes");
-			text = firstNum + " a " + lastNum + " de 20 ordenes";
+			console.log((firstNum +1) + " a " + lastNum + " de 20 ordenes");
+			text = (firstNum + 1) + " a " + lastNum + " de 20 ordenes";
 		}
 
 		$('.pageText').text(text);
@@ -36,7 +36,7 @@ $(document).ready(function(){
 			$(".pageButton.active").next().addClass("active");
 			$( ".pageButton:eq("+indice+")").removeClass("active");
 			$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300);			
-			text = (firstNum + 5) + " a " + (lastNum + 5) + " de 20 ordenes";			
+			text = ((firstNum + 5) + 1) + " a " + (lastNum + 5) + " de 20 ordenes";			
 			$('.pageText').text(text);
 		}
 	});
