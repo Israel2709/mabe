@@ -361,7 +361,7 @@
 					<div class="col-md-12 tab-options">
 						<div class="row">
 							<div class="col-md-3">
-								<a href="javascript:void(0);" class="active">Mis productos registrados</a>
+								<a href="javascript:void(0);">Mis productos registrados</a>
 							</div>
 							<div class="col-md-3">
 								<a href="javascript:void(0);">Mis &oacute;rdenes de servicio</a>
@@ -370,38 +370,53 @@
 								<a href="javascript:void(0);">Mis &oacute;rdenes de compra</a>
 							</div>
 							<div class="col-md-3">
-								<a href="javascript:void(0);">Mis datos personales</a>
+								<a href="javascript:void(0);" class="active">Mis datos personales</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<table class="table general-table">
-						<tr>
-							<th>Modelo</th>
-							<th>Serial</th>
-							<th>Fecha de compra</th>
-							<th>Lugar de compra</th>
-							<th>Expiraci&oacute;n de la garant&iacute;a</th>
-							<th>Servicio t&eacute;cnico</th>
-						</tr>
-						<tr>
-							<td>AKNCD9I3JDJ9LD0</td>
-							<td></td>
-							<td>10/03/2017</td>
-							<td>Liverpool</td>
-							<td>10/03/2018</td>
-							<td><div class="btn btn-green">Solicitar</div></td>
-						</tr>
-						<tr>
-							<td>AKNCD9I3JDJ9LD0</td>
-							<td></td>
-							<td>10/03/2017</td>
-							<td>Liverpool</td>
-							<td>10/03/2018</td>
-							<td><div class="btn btn-green">Solicitar</div></td>
-						</tr>
-					</table>
+					<div class="col-md-10 col-md-offset-1 data-form">
+						<div class="col-md-6">
+							<form>
+							  <div class="form-group">
+							    <label>Nombre</label>
+							    <input type="text" class="form-control" placeholder="Nombre" value="Andrea Buend&iacute;a">
+							  </div>
+							  <div class="form-group">
+							    <label for="">Correo elect&oacute;nico</label>
+							    <input type="email" class="form-control"  placeholder="Correo electr&oacute;nico" value="andrea@gmail.com">
+							  </div>
+							  <div class="form-group">
+							    <label for="">Tel&eacute;fono</label>
+							    <input type="text" class="form-control"  placeholder="Tel&eacute;fono" value="55 12345678">
+							  </div>
+							  
+							</form>
+						</div>
+						<div class="col-md-6">
+							<form>
+							  <div class="form-group">
+							    <label for="">M&eacute;todo de pago</label>
+							    <input type="text" class="form-control card-input" placeholder="M&eacute;todo de pago" value="**** **** **** 4321">
+							  </div>
+							  <div class="form-group">
+							    <label for="">Fecha de vencimiento</label>
+							    <input type="text" class="form-control"  placeholder="Fecha de vencimiento" value="10 / 2020">
+							  </div>
+							  <div class="form-group">
+							    <label for="">C&oacute;digo de seguridad (CVV)</label>
+							    <input type="password" class="form-control" placeholder="C&oacute;digo de seguridad (CVV)" value="487">
+							  </div>
+							  <div class="form-group">
+							    <label for="">Datos de facturaci&oacute;n</label>
+							    <input type="text" class="form-control"  placeholder="Datos de facturaci&oacute;n" value="AISU84011218W">
+							  </div>
+							  <div class="btn btn-green col-md-6">Submit</div>
+							  <div class="btn btn-green col-md-6">Submit</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 			
