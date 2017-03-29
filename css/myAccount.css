@@ -38,3 +38,22 @@
     background: #3D794C;
     border: #3D794C;
 }
+
+.form-area label{
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+    margin: 40px 0px 20px 0px;
+}
+
+.ordersTable tbody tr{
+    height: 50px;
+}
+
+.ordersTable tbody tr td{
+    padding: 20px !important;
+}
+
+.grayFont{
+    color: #979;
+}
