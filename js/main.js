@@ -4,6 +4,21 @@ $(document).ready(function(){
 	calendar();
 
 	$(".pageButton").click(function(){
+		
+		var firstNum = ($(this).text() * 5) - 5;
+		var lastNum = $(this).text() * 5;
+
+		var text = '';
+		if(firstNum == 0){
+			console.log("1 a "+ lastNum +" de 20 ordenes");
+			text = "1 a "+ lastNum +" de 20 ordenes";
+		}else{
+			console.log(firstNum + " a " + lastNum + " de 20 ordenes");
+			text = firstNum + " a " + lastNum + " de 20 ordenes";
+		}
+
+		$('.pageText').text(text);
+
 		$(".pageButton").removeClass("active");
 		$(this).addClass("active");
 		$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300)
@@ -11,11 +26,18 @@ $(document).ready(function(){
 
 	$(".nextButton").click(function(){
 		var indice = $(".pageButton.active").index();
+		console.log(indice)
+		var text = '';
+		var firstNum = ((indice + 1) * 5) - 5;
+		var lastNum = (indice + 1) * 5;
 
+		console.log(firstNum +" "+ lastNum)
 		if(indice < 3){
 			$(".pageButton.active").next().addClass("active");
-			$( ".pageButton:eq("+indice+")").removeClass("active")
-			$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300)
+			$( ".pageButton:eq("+indice+")").removeClass("active");
+			$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300);			
+			text = (firstNum + 5) + " a " + (lastNum + 5) + " de 20 ordenes";			
+			$('.pageText').text(text);
 		}
 	});
 });
