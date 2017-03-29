@@ -2,6 +2,14 @@ $(document).ready(function(){
 	main_menu();
 	labels();
 	calendar();
+
+	$(".pagination a").click(function(){
+		$(".pagination a").each(function(index){
+			$(this).removeClass();
+		});
+
+		$(this).addClass("active");
+	});
 });
 
 function labels(){
@@ -155,4 +163,8 @@ function hide_modal(){
 	$('.modal-box').fadeOut('fast',function(){
 		$('.overlay-blk').fadeOut();
 	});
+}
+
+function page_active(element){
+	console.log("activar")
 }

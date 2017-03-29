@@ -38,3 +38,8 @@ table.general-table td{
     background: #3D794C;
     border: #3D794C;
 }
+
+.pagination  a.active{
+    font-weight: bold;
+    font-size: 18px;
+}
