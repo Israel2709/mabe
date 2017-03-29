@@ -26,8 +26,8 @@
 	font-size: 16px;
 }
 
-.general-table td{
-	vertical-align: middle;
+table.general-table td{
+	vertical-align: middle !important;
 }
 
 .general-table .btn-success{
