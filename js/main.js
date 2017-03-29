@@ -2,6 +2,20 @@ $(document).ready(function(){
 	main_menu();
 	labels();
 	calendar();
+
+	$(".pageButton").click(function(){
+		$(".pageButton").removeClass("active");
+		$(this).addClass("active");
+	});
+
+	$(".nextButton").click(function(){
+		var indice = $(".pageButton.active").index();
+
+		if(indice < 3){
+			$(".pageButton.active").next().addClass("active");
+			$( ".pageButton:eq("+indice+")").removeClass("active")
+		}
+	});
 });
 
 function labels(){
@@ -155,4 +169,8 @@ function hide_modal(){
 	$('.modal-box').fadeOut('fast',function(){
 		$('.overlay-blk').fadeOut();
 	});
+}
+
+function page_active(element){
+	console.log("activar")
 }

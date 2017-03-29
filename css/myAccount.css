@@ -26,8 +26,8 @@
 	font-size: 16px;
 }
 
-.general-table td{
-	vertical-align: middle;
+table.general-table td{
+	vertical-align: middle !important;
 }
 
 .general-table .btn-success{
@@ -56,4 +56,13 @@
 
 .grayFont{
     color: #979;
+}
+
+.pagination  a.active{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.data-form{
+	margin-top:40px;
 }
