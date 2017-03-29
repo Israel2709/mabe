@@ -2,6 +2,22 @@ $(document).ready(function(){
 	main_menu();
 	labels();
 	calendar();
+
+	$(".pageButton").click(function(){
+		$(".pageButton").removeClass("active");
+		$(this).addClass("active");
+		$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300)
+	});
+
+	$(".nextButton").click(function(){
+		var indice = $(".pageButton.active").index();
+
+		if(indice < 3){
+			$(".pageButton.active").next().addClass("active");
+			$( ".pageButton:eq("+indice+")").removeClass("active")
+			$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300)
+		}
+	});
 });
 
 function labels(){
