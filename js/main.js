@@ -10,10 +10,8 @@ $(document).ready(function(){
 
 		var text = '';
 		if(firstNum == 0){
-			console.log("1 a "+ lastNum +" de 20 ordenes");
 			text = "1 a "+ lastNum +" de 20 ordenes";
 		}else{
-			console.log((firstNum +1) + " a " + lastNum + " de 20 ordenes");
 			text = (firstNum + 1) + " a " + lastNum + " de 20 ordenes";
 		}
 
@@ -26,12 +24,9 @@ $(document).ready(function(){
 
 	$(".nextButton").click(function(){
 		var indice = $(".pageButton.active").index();
-		console.log(indice)
 		var text = '';
 		var firstNum = ((indice + 1) * 5) - 5;
 		var lastNum = (indice + 1) * 5;
-
-		console.log(firstNum +" "+ lastNum)
 		if(indice < 3){
 			$(".pageButton.active").next().addClass("active");
 			$( ".pageButton:eq("+indice+")").removeClass("active");
