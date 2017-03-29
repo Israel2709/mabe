@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$(".pageButton").click(function(){
 		$(".pageButton").removeClass("active");
 		$(this).addClass("active");
-		$(".table.general-table tr td").fadeOut(300).fadeIn(300)
+		$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300)
 	});
 
 	$(".nextButton").click(function(){
@@ -15,7 +15,7 @@ $(document).ready(function(){
 		if(indice < 3){
 			$(".pageButton.active").next().addClass("active");
 			$( ".pageButton:eq("+indice+")").removeClass("active")
-			$(".table.general-table tr td").fadeOut(300).fadeIn(300)
+			$(".table.general-table tr td:not('.page')").fadeOut(300).fadeIn(300)
 		}
 	});
 });
