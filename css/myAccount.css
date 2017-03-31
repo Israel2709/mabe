@@ -123,13 +123,16 @@ table.general-table td {
   font-size: 18px; }
 
 .page-confirmation {
-  padding-top: 110px; }
-  .page-confirmation .middle-header {
-    background: none;
-    border: none; }
-  .page-confirmation .logo {
-    display: block;
-    margin: 13px auto; }
+  padding-top: 0px; }
+  .page-confirmation .header {
+    position: relative; }
+    .page-confirmation .header .middle-header {
+      background: none;
+      border: none; }
+      .page-confirmation .header .middle-header .logo {
+        display: block;
+        margin: 13px auto;
+        float: none; }
   .page-confirmation .title {
     border-bottom: none;
     margin-bottom: 0px;
@@ -194,5 +197,51 @@ table.general-table td {
     min-width: 270px;
     margin-top: 20px;
     margin-bottom: 20px; }
+
+.login {
+  position: relative;
+  z-index: 1; }
+
+.loginTooltip {
+  position: absolute;
+  top: 20px;
+  background-color: transparent;
+  display: none;
+  padding: 0 20px 5px;
+  margin-left: 38px;
+  z-index: 1000; }
+  .loginTooltip ul {
+    background-color: #f5f5f5;
+    list-style: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 150px;
+    box-shadow: 0 0 5px #ccc;
+    z-index: 5; }
+    .loginTooltip ul a {
+      display: block;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      color: black; }
+      .loginTooltip ul a:last-child {
+        border-bottom: none; }
+      .loginTooltip ul a li {
+        padding: 5px 10px;
+        text-align: center; }
+    .loginTooltip ul li:hover {
+      background-color: #eee; }
+
+.tooltipTriangle {
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #f5f5f5;
+  margin-left: 90px;
+  z-index: 10; }
+
+.user {
+  display: block; }
 
 /*# sourceMappingURL=myAccount.css.map */

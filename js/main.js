@@ -3,6 +3,24 @@ $(document).ready(function(){
 	labels();
 	calendar();
 
+	$('html').click(function(){
+		$('.loginTooltip').hide();
+	});
+
+	$('.login a').click(function(e){
+		e.stopPropagation();
+		var btnPosition = $(this).offset()
+		var btnLeftPosition = btnPosition.left
+		var btnTopPosition = btnPosition.top
+		console.log($(this).offset())
+		console.log("top "+btnTopPosition+ " left "+btnLeftPosition)
+		$(".loginTooltip").css({
+			top:btnTopPosition+20,
+			left:btnLeftPosition
+		})
+		toggleLoginTooltip();
+	});
+
 	$(".pageButton").click(function(){
 		
 		var firstNum = ($(this).text() * 5) - 5;
@@ -35,7 +53,13 @@ $(document).ready(function(){
 			$('.pageText').text(text);
 		}
 	});
+
+	
 });
+
+function toggleLoginTooltip(){
+	$(".loginTooltip").toggle();
+}
 
 function labels(){
 	$('.page-login .login input, .page-login .register input').focus(function(){
