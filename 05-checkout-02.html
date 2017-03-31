@@ -346,123 +346,261 @@
 			</div>
 		</div>
 
-		<div class="page-account">
-			<div class="title-bar title-account">
+		<div class="page-checkout">
+			<div class="title-bar title-checkout">
 				<div class="container">
-					<h1>Mi cuenta</h1>
-					<p>Administra tus productos y tus compras.</p>
+					<h1>Finalizar tu compra</h1>
+					<p>Gracias por tu preferencia y confianza</p>
 				</div>
 			</div>
-
 			<div class="container">
-				<h2 class="title">Navega entre pestañas para acceder a la informaci&oacute;n</h2>
 				<div class="row">
-					<div class="col-md-12 tab-options">
+					<div class="col-md-8">
+						<h2 class="title">Información general</h2>
 						<div class="row">
-							<div class="col-md-3">
-								<a href="javascript:void(0);">Mis productos registrados</a>
+							<div class="col-md-10 col-md-offset-1">
+								<div class="progress-line">
+									<div class="img">
+										<img src="img/line-100-percent.png">
+									</div>
+									<div class="steps">
+										<div class="step">
+											<img src="img/ico-direccion.png"><br>
+											Dirección de envío
+										</div>
+										<div class="step text-center">
+											<img src="img/ico-envio.png"><br>
+											Método de envio
+										</div>
+										<div class="step text-center">
+											<img src="img/ico-pago.png"><br>
+											Metodo de pago
+										</div>
+										<div class="step step-active text-right">
+											<img src="img/ico-completo-h.png"><br>
+											Confirmación
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-3">
-								<a href="javascript:void(0);" class="active">Mis &oacute;rdenes de servicio</a>
+							
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="subtitle open-tab" onclick="tab_show_hide( '.box-direcciones' );">Selecciona una dirección de envío</h3>
+							</div>	
+						</div>
+						<div class="row box-direcciones">
+							<div class="col-md-12">
+								<p>
+									Selecciona una de las direcciones que registraste anteriormente. O puedes <a href="javascript:void(0);">agregar otra dirección de envío</a>
+								</p>
 							</div>
-							<div class="col-md-3">
-								<a href="javascript:void(0);">Mis &oacute;rdenes de compra</a>
-							</div>
-							<div class="col-md-3">
-								<a href="javascript:void(0);">Mis datos personales</a>
+							<div class="col-md-10 col-md-offset-1 marginT20">
+								<div class="row">
+									<b>Andrea buendía</b><br>
+									Norte 35-A, Int. 204, Valle Gomez, Del. Gustavo A Madero, Ciudad de México, C.P. 00940, Teléfono 5512345678
+									<div class="buttons">
+										<a href="javascript:void(0)">Eliminar Dirección</a>
+										<button class="btn btn-blue">Editar dirección</button>
+										<button class="btn btn-green">Selecciona esta dirección</button>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<div class="row">
+									<b>Andrea buendía</b><br>
+									Norte 35-A, Int. 204, Valle Gomez, Del. Gustavo A Madero, Ciudad de México, C.P. 00940, Teléfono 5512345678
+									<div class="buttons">
+										<a href="javascript:void(0)">Eliminar Dirección</a>
+										<button class="btn btn-blue">Editar dirección</button>
+										<button class="btn btn-green">Selecciona esta dirección</button>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<div class="row">
+									<b>Andrea buendía</b><br>
+									Norte 35-A, Int. 204, Valle Gomez, Del. Gustavo A Madero, Ciudad de México, C.P. 00940, Teléfono 5512345678
+									<div class="buttons">
+										<a href="javascript:void(0)">Eliminar Dirección</a>
+										<button class="btn btn-blue">Editar dirección</button>
+										<button class="btn btn-green">Selecciona esta dirección</button>
+									</div>
+								</div>
+								<div class="row marginT20">
+									<p class="text-right">
+										<a href="javascript:void(0);">Mostrar más direcciones guardadas</a>
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="table-responsive">
-							<table class="table general-table">
-								<tr>
-									<th>SAP Orden ID</th>
-									<th>Direcci&oacute;n</th>
-									<th>Tipo de servicio</th>
-									<th>Descripción de servicio</th>
-									<th>Fecha de reparaci&oacute;n</th>
-									<th>Costo de visita</th>
-									<th>Nombre t&eacute;cnico</th>
-									<th>Estado y despliegues</th>
-								</tr>
-								<tr>
-									<td>AKNC812</td>
-									<td>Norte 35-A <br>#123 Col. Valle Gomez</td>
-									<td>Reaparaci&oacute;n</td>
-									<td>Fuga en la manguera <br>de agua</td>
-									<td>10/03/2017</td>
-									<td>$709</td>
-									<td>&Aacute;ngel Alvarado</td>
-									<td>Completado</td>
-								</tr>
-								<tr>
-									<td>AKNC812</td>
-									<td>Norte 35-A <br>#123 Col. Valle Gomez</td>
-									<td>Reaparaci&oacute;n</td>
-									<td>Fuga en la manguera <br>de agua</td>
-									<td>10/03/2017</td>
-									<td>$709</td>
-									<td>&Aacute;ngel Alvarado</td>
-									<td>Completado</td>
-								</tr>
-								<tr>
-									<td>AKNC812</td>
-									<td>Norte 35-A <br>#123 Col. Valle Gomez</td>
-									<td>Reaparaci&oacute;n</td>
-									<td>Fuga en la manguera <br>de agua</td>
-									<td>10/03/2017</td>
-									<td>$709</td>
-									<td>&Aacute;ngel Alvarado</td>
-									<td>Completado</td>
-								</tr>
-								<tr>
-									<td>AKNC812</td>
-									<td>Norte 35-A <br>#123 Col. Valle Gomez</td>
-									<td>Reaparaci&oacute;n</td>
-									<td>Fuga en la manguera <br>de agua</td>
-									<td>10/03/2017</td>
-									<td>$709</td>
-									<td>&Aacute;ngel Alvarado</td>
-									<td>Completado</td>
-								</tr>
-								<tr>
-									<td>AKNC812</td>
-									<td>Norte 35-A <br>#123 Col. Valle Gomez</td>
-									<td>Reaparaci&oacute;n</td>
-									<td>Fuga en la manguera <br>de agua</td>
-									<td>10/03/2017</td>
-									<td>$709</td>
-									<td>&Aacute;ngel Alvarado</td>
-									<td>Completado</td>
-								</tr>
-								<tr>
-									<td colspan="6" class="page pageText"></td>
-									<td colspan="2" class="page">
-										
-									</td>
-								</tr>
-							</table>
+
+
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="subtitle open-tab" onclick="tab_show_hide( '.box-entrega' );">Agregar información de entrega</h3>
+							</div>	
+						</div>
+						<div class="row box-entrega">
+							<div class="col-md-12">
+								<p>
+									Completa los siguientes campos para añadir una nueva dirección de envío
+								</p>
+							</div>
+							<div class="col-md-10 col-md-offset-1">
+								<div class="form-area">
+									<div class="row">
+										<div class="col-md-6">
+											<label>
+												<span>Nombre / Quién recibe</span>
+												<input type="text">
+											</label>
+											<label>
+												<span>Código postal</span>
+												<input type="text">
+											</label>
+											<label>
+												<span>Ciudad</span>
+												<input type="text">
+											</label>
+											<label>
+												<span>Telefono fijo</span>
+												<input type="tel">
+											</label>
+										</div>
+
+										<div class="col-md-6">
+											<label>
+												<span>Dirección (calle, num. de casa o interior)</span>
+												<input type="text">
+											</label>
+											<label>
+												<span>Estado</span>
+												<input type="text">
+											</label>
+											<label>
+												<span>Colonia</span>
+												<input type="text">
+											</label>
+											<label>
+												<span>Teléfono celular</span>
+												<input type="text">
+											</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="buttons">
+												<button class="btn btn-green">Continuar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
 
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<p>1 - 5 de 20 ordenes</p>
-					</div>
-					<div class="col-sm-6">
-						<div class="pagination">
-							<a href="javascript:void(0)" class="active">1</a>
-							<a href="javascript:void(0)">2</a>
-							<a href="javascript:void(0)">3</a>
-							<a href="javascript:void(0)">4</a>
-							<a href="javascript:void(0)">&gt;</a>
+					<div class="col-md-4">
+						<h2 class="title2">Tu pedido</h2>
+
+						<div class="pedido">
+							<div class="item">
+								<img src="img/img-refaccion-01.png">
+								<p class="description">
+									Control de maquina de lavado<br>
+									<span class="code">AKNCD913JDJ9LD</span><br>
+									<span class="quantity">Cant. 1</span>
+								</p>
+								<p class="price">
+									<span>$</span>345<span>00</span> 
+								</p>
+							</div>
+							<div class="divider"></div>
+							<div class="item">
+								<img src="img/img-refaccion-02.png">
+								<p class="description">
+									Control de maquina de lavado<br>
+									<span class="code">AKNCD913JDJ9LD</span><br>
+									<span class="quantity">Cant. 1</span>
+								</p>
+								<p class="price">
+									<span>$</span>345<span>00</span> 
+								</p>
+							</div>
+							<div class="divider"></div>
+							<div class="item">
+								<img src="img/img-refaccion-03.png">
+								<p class="description">
+									Control de maquina de lavado<br>
+									<span class="code">AKNCD913JDJ9LD</span><br>
+									<span class="quantity">Cant. 1</span>
+								</p>
+								<p class="price">
+									<span>$</span>345<span>00</span> 
+								</p>
+							</div>
+							<div class="pedido-totales">
+								<div class="row subtotal">
+									<div class="col-md-12">
+										<p class="label">Subtotal:</p>
+										<p class="description">
+											<span>$</span>1,035<span>00</span>
+										</p>
+									</div>
+									
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<p class="label">Envío:</p>
+										<p class="description">
+											<span>$</span>100<span>00</span>
+										</p>
+									</div>
+									
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<p class="label">IVA:</p>
+										<p class="description">
+											<span>$</span>20<span>00</span>
+										</p>
+									</div>
+									
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<p class="label">Descuento:</p>
+										<p class="description">
+											- <span>$</span>400<span>00</span>
+										</p>
+									</div>
+									
+								</div>
+								<div class="row total">
+									<div class="col-md-12">
+										<p class="label">Total:</p>
+										<p class="description">
+											<span>$</span>755<span>00</span>
+										</p>
+									</div>
+									
+								</div>
+							</div>
+							<div class="buttons">
+								<button class="btn btn-blue">Editar mi pedido</button>
+							</div>
 						</div>
+						
 					</div>
 				</div>
+				
+			</div>
+			<div class="bottom-menu">
+				<a href="javascript:void(0);" class="option option-big">
+					<img src="img/ico-preguntas.png">
+					<p class="title">Preguntas sobre el sitio</p>
+					<p class="text">Resuelve las dudas m&aacute;s frecuentes acerca del sitio Serviplus</p>
+				</a>
 			</div>
 		</div>
 

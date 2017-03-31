@@ -156,7 +156,19 @@ select{
 	margin: 20px 0;
 }
 
+.text-left{
+	text-align: left!important;
+}
+
+body{
+	padding-top: 164px;
+}
 .header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
 	.top-header{
 		background: #13495d;
 		color: #b9c9cf;
@@ -510,6 +522,12 @@ select{
 .title-terminos{
 	background: url(../img/title-terminos.jpg) center center no-repeat;
 }
+.title-account{
+	background: url(../img/title-account.png) center center no-repeat;
+}
+.title-checkout{
+	background: url(../img/title-checkout.jpg) center center no-repeat;
+}
 .title-bar{
 	overflow: hidden;
 	height: 150px;
@@ -527,14 +545,14 @@ select{
 }
 
 h2.title{
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: 700;
 	border-bottom: 1px solid #7f7f7f;
 	padding: 20px 5px;
 	margin-bottom: 20px;
 }
 h2.title2{
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: 300;
 	border-bottom: 1px solid #7f7f7f;
 	padding: 20px 5px;
@@ -1386,6 +1404,8 @@ h3.subtitle{
 .page-consultaservicio{
 	padding-top: 30px;
 }
+.page-account,
+.page-checkout,
 .page-registraproducto,
 .page-solicitudservicio,
 .page-consultaservicio{
@@ -1450,7 +1470,8 @@ h3.subtitle{
 			margin: 20px 0 20px 0;
 			span{
 				color: #999999;
-				font-size: 14px;
+				font-size: 13px;
+				font-weight: 300;
 				position: relative;
 				top: 23px;
 				left: 10px;
@@ -1487,9 +1508,12 @@ h3.subtitle{
 				text-align: right;
 			}
 		}
+		label.radio-input,
 		label.checkbox-input{
 			input{
 				width: auto;
+				margin-right: 10px;
+				margin-left: 3px;
 			}
 		}
 		a{
@@ -1526,7 +1550,14 @@ h3.subtitle{
 				color: #13495d;
 			}
 		}
+		.detail.green{
+			p{
+				color: #009b3b;	
+			}
+			
+		}
 		.detail{
+			margin-bottom: 12px;
 			img{
 				display: block;
 				margin: 0 auto;
@@ -1534,13 +1565,25 @@ h3.subtitle{
 			}
 			p{
 				text-align: left;
-				font-size: 16px;
+				font-size: 14px;
 				span{
 					color: #b5b5b5;
 					display: block;
 					font-size: 12px;
 					font-weight: 300;
+					margin-bottom: 3px;
 				}
+			}
+		}
+		.articulo{
+			color: #999999;
+			font-size: 12px;
+			overflow: hidden;
+			img{
+				width: 40px;
+				float: left;
+				margin-right: 10px;
+				margin-bottom: 30px;
 			}
 		}
 	}
@@ -1692,10 +1735,408 @@ h3.subtitle{
 	.buttons{
 		margin-top: 40px;
 		text-align: right;
+		a{
+			font-size: 12px;
+			text-decoration: underline;
+			position: relative;
+			top: -6px;
+		}
 		.btn{
 			margin-left: 10px;
 			margin-bottom: 15px;
 		}
+	}
+}
+.page-account{
+	padding-bottom: 100px;
+	.tab-options{
+		text-align: center;
+		margin-top: 20px;
+		a{
+			color: #979797;
+			font-size: 18px;
+			font-weight: 300;
+			padding: 2px 3px;
+		}
+		a:hover{
+			color: #2f2f2f;
+			text-decoration: none;
+		}
+		a.active{
+			color: #2f2f2f;
+			border-bottom: 1px solid #2f2f2f;
+		}
+	}
+	.form-area{
+		margin-top: 20px;
+	}
+	.table-responsive{
+		margin-top: 50px;
+		border: none;
+		table.general-table{
+			
+			th{
+				color: white;
+				background: #13495d;
+				font-size: 14px;
+			}
+			td{
+				vertical-align: middle !important;
+			}
+			a{
+				color: #008aaf;
+				text-decoration: underline;
+				font-size: 12px;
+			}
+			a:hover{
+				color: #13495d;
+			}
+		}
+		table.ordersTable{
+			tbody{
+				tr{
+					height: 50px;
+				}	
+				td{
+					padding: 20px !important;
+				}	
+			}	
+		}
+	}
+	.card-number{
+		position: relative;
+		.input-btn{
+			position: absolute;
+		}
+		.input-btn.card-type{
+			bottom: 8px;
+			right: 100px;
+			width: 25px;
+			height: 15px;
+			background: url(../img/mastercard-ico.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		.input-btn.card-bank{
+			bottom: 8px;
+			right: 43px;
+			width: 45px;
+			height: 18px;
+			background: url(../img/citi-ico.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		.input-btn.trash-btn{
+			bottom: 10px;
+			right: 20px;
+			width: 13px;
+			height: 16px;
+			background: url(../img/trash-ico.png) no-repeat;
+			background-size: 100% 100%;
+			cursor: pointer;
+		}
+	}
+	.pagination{
+		margin: 0;
+		a{
+			padding-top:0;
+			padding-bottom:0;
+		}
+	}	
+}
+.page-checkout{
+	.pedido{
+		overflow: hidden;
+		
+		.divider{
+			margin: 0;
+		}
+		.item{
+			padding: 20px 0;
+			overflow: hidden;
+			img{
+				float: left;
+				max-width: 17%;
+				margin-right: 5%;
+			}
+			.description{
+				color: #999999;
+				float: left;
+				display: block;
+				width: 55%;
+				font-size: 12px;
+			}
+			.price{
+				width: 20%;
+				display: block;
+				float: right;
+				font-size: 20px;
+				color: #999999;
+				text-align: center;
+				margin-top: 20px;
+				span{
+					font-size: 12px;
+					position: relative;
+					top: -5px;
+				}
+			}
+		}
+		.pedido-totales{
+			padding-top: 20px;
+			border-top: 1px dashed #999999;
+			.row{
+				margin-top: 10px;
+				margin-bottom: 10px;
+				overflow: hidden;
+				.label{
+					font-size: 16px;
+					font-weight: 300;
+					color: #999999;
+					float: left;
+				}
+				.description{
+					font-size: 16px;
+					color: #999999;
+					font-weight: 400;
+					float: right;
+					span{
+						font-size: 12px;
+						position: relative;
+						top: -3px;
+					}
+				}
+
+			}
+			.subtotal{
+				.label{
+					font-weight: 400;
+				}
+			}
+			.total{
+				.label{
+					font-weight: 700;
+					color: #000000;
+				}
+				.description{
+					font-weight: 700;
+					color: #000000;
+				}
+			}
+		}
+		.buttons{
+			text-align: center;
+		}
+	}
+
+	.items{
+		margin-top: 40px;
+		margin-bottom: 30px;
+		overflow: hidden;
+		border-bottom: 1px solid #eaeaea;
+		.item{
+			overflow: hidden;
+			margin: 40px 0;
+			.img{
+				text-align: center;
+				img{
+					max-width: 100%;
+				}
+			}
+			.description{
+				.name{
+					color: #303030;
+					font-size: 16px;
+					margin-bottom: 5px;
+				}
+				.availability{
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+				.availability.green{
+					color: #009b3b;
+				}
+				.availability.red{
+					color: #ff5151;
+				}
+				.options{
+					font-size: 12px;
+					color: #999999;
+					a{
+						color: #008bb0;
+						text-decoration: underline;
+					}
+					a:hover{
+						color: #13495d;
+					}
+				}
+				
+			}
+			.quantity{
+				text-align: center;
+				padding-top: 35px;	
+				p{
+					display: inline-block;
+					font-size: 12px;
+					text-transform: uppercase;
+					font-weight: 300;
+					margin-right:25px;	
+				}
+				
+				input{
+					width: 40px;
+					text-align: center;
+					border: none;
+					border-bottom: 1px solid #bcbcbc;
+				}
+			}
+			.price{
+				text-align: center;
+				padding-top: 20px;	
+				.title{
+					font-size: 12px;
+					color: #999999;
+					margin-bottom: 10px;
+				}
+				.amount{
+					font-size: 20px;
+					color: #000000;
+					span{
+						font-size: 12px;
+						position: relative;
+						top: -5px;
+					}
+				}
+			}
+		}
+	}
+	.discount-code{
+		margin-bottom: 50px;
+		label{
+			width: 100%;
+			overflow: hidden;
+			clear: both;
+			margin: 20px 0 20px 0;
+			span{
+				color: #999999;
+				font-size: 14px;
+				position: relative;
+				top: 23px;
+				left: 10px;
+				@include anim_transicion_ease();
+			}
+			span.focus{
+				top: 0;
+				left: 0;
+			}
+			input{
+				background: transparent;
+				width: 100%;
+				border: none;
+				border-bottom: 1px solid #999999;
+				color: #000000;
+				padding: 5px 3px;
+			}
+			.error-msj{
+				visibility: hidden;
+			}
+		}
+		label.error{
+			span{
+				color: #ee0101;
+			}
+			input,
+			select{
+				border-bottom: 1px solid #ee0101;
+				color: #ee0101;
+			}
+			.error-msj{
+				visibility: visible;
+				color: #ee0101;
+				text-align: right;
+			}
+		}
+		.buttons{
+			text-align: right;
+		}
+	}
+	.totals{
+		font-weight: 300;
+		font-size: 22px;
+		color: #303030;
+		margin-bottom: 50px;
+		text-align: right;
+		.amount{
+			font-weight: 400;
+			span{
+				font-size: 14px;
+				position: relative;
+				top: -5px;
+			}
+		}
+		.buttons{
+			margin-top: 50px;
+			text-align: center;
+			.btn{
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.buttons-select{
+		margin: 30px 0;
+		.btn-select{
+			border: 1px solid #e6e6e6;
+			background: #FFFFFF;
+			padding: 20px 8px;
+			overflow: hidden;
+			margin-bottom: 10px;
+			min-height: 76px;
+			@include border_radius(5px);
+			@include anim_transicion_ease();
+			img{
+				float: left;
+				margin-right: 15px;
+				margin-top: 5px;
+			}
+			p{
+				display: block;
+				float: left;
+				font-weight: 300;
+				font-size: 12px;
+				span.title{
+					font-weight: 700;
+					display: block;
+					clear: both;
+				}
+				span.price{
+					display: block;
+					clear: both;
+				}
+			}
+		}
+		.btn-select:hover{
+			-webkit-box-shadow: 0px 0px 5px 0px #008bb0;
+			-moz-box-shadow: 0px 0px 5px 0px #008bb0;
+			box-shadow: 0px 0px 5px 0px #008bb0;
+		}
+		.btn-select.active{
+			background: #13495d;
+			border: 1px solid #13495d;
+			p{
+				color: #FFFFFF;
+			}
+		}
+	}
+	h3.subtitle.open-tab{
+		background: url(../img/tab-open.png) center left no-repeat;
+		border-top: 1px solid #CCCCCC;
+		padding: 15px 5px 15px 30px;
+		cursor: pointer;
+	}
+	h3.subtitle.close-tab{
+		background: url(../img/tab-close.png) center left no-repeat;
+		border-top: 1px solid #CCCCCC;
+		border-bottom: 1px solid #CCCCCC;
+		padding: 15px 5px 15px 30px;
+		cursor: pointer;
 	}
 }
 .page-static{
@@ -1817,6 +2258,10 @@ h3.subtitle{
 			font-size: 12px;
 			color: #000000;
 		}
+	}
+	.option-big,
+	.option-big:hover{
+		width: 100%;
 	}
 }
 .bottom-options{
@@ -2021,6 +2466,170 @@ h3.subtitle{
 }
 
 
+.btn-chat{
+	background: #FFFFFF url(../img/ico-btn-chat.png) center center no-repeat;
+	background-size: 20px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #13495d;
+	position: fixed;
+	bottom: 14px;
+	right: 14px;
+	cursor: pointer;
+	-webkit-box-shadow: 0px 0px 5px 0px #13495d;
+	-moz-box-shadow: 0px 0px 5px 0px #13495d;
+	box-shadow: 0px 0px 5px 0px #13495d;
+	@include border_radius(50%);
+}
+.chat-box{
+	display: none;	
+	background:#FFFFFF;
+	width: 300px;
+	height: 380px;
+	position: fixed;
+	bottom: 70px;
+	right: 10px;
+	z-index: 99999;
+	-webkit-box-shadow: 0px 0px 15px 0px #13495d;
+	-moz-box-shadow: 0px 0px 15px 0px #13495d;
+	box-shadow: 0px 0px 15px 0px #13495d;
+	@include border_radius(5px);
+	.head{
+		background: #97999a;
+		padding: 10px 15px;
+		overflow: hidden;
+		margin-top: -40px;
+		@include border_top_radius(5px);
+		@include anim_transicion_ease();
+		h1{
+			color: #FFFFFF;
+			font-weight: 300;
+			font-size: 18px;
+		}
+		.btn-close{
+			background: url(../img/ico-close-chat.png) no-repeat;
+			width: 15px;
+			height: 15px;
+			border: none;
+			float: right;
+		}
+	}
+	p.title{
+		color: #008bb0;
+		font-size: 14px;
+		padding: 15px 15px 0 15px;
+		font-weight: 300;
+	}
+	.page-userdata{
+		padding: 15px;
+		overflow: hidden;
+		label{
+			width: 100%;
+			overflow: hidden;
+			clear: both;
+			text-align: left;
+			margin: 10px auto 10px auto;
+			span{
+				color: #999999;
+				font-size: 14px;
+				position: relative;
+				top: 23px;
+				left: 10px;
+				@include anim_transicion_ease();
+			}
+			span.focus{
+				top: 0;
+				left: 0;
+			}
+			input{
+				background: transparent;
+				width: 100%;
+				border: none;
+				border-bottom: 1px solid #999999;
+				color: #000000;
+				padding: 5px 3px;
+			}
+			.error-msj{
+				visibility: hidden;
+			}
+		}
+		label.error{
+			span{
+				color: #ee0101;
+			}
+			input,
+			select{
+				border-bottom: 1px solid #ee0101;
+				color: #ee0101;
+			}
+			.error-msj{
+				visibility: visible;
+				color: #ee0101;
+				text-align: right;
+			}
+		}
+		.buttons{
+			text-align: center;
+			padding-top: 20px;
+			.btn{
+				width: 80%;
+			}
+		}
+	}
+	.page-chat{
+		padding: 0 15px;
+		.chat-messages{
+			height: 230px;
+			padding: 15px 0;
+			margin-bottom: 10px;
+			overflow: scroll;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			.chat-mabe{
+				background: url(../img/line-divider.png) center bottom no-repeat;
+				background-size: contain;
+				color: #008bb0;
+				font-size: 12px;
+				padding: 10px 0;
+			}
+			.chat-user{
+				background: url(../img/line-divider.png) center bottom no-repeat;
+				background-size: contain;
+				color: #999999;
+				font-size: 12px;
+				padding: 10px 0;
+			}
+		}
+		input{
+			background: transparent;
+			width: 90%;
+			border: none;
+			border-bottom: 1px solid #999999;
+			color: #000000;
+			padding: 5px 3px;
+			margin: 0 auto;
+			display: block;
+		}
+		.buttons{
+			text-align: center;
+			padding-top: 20px;
+			.btn{
+				width: 80%;
+			}
+		}	
+	}
+	.arrow{
+		background: url(../img/arrow-chat.png) no-repeat;
+		background-size: contain;
+		width: 22px;
+		height: 11px;
+		position: absolute;
+		bottom: -10px;
+		right: 13px;
+	}
+}
+
 @media screen and (max-width: 767px) {
 	.header{
 		.top-header{
@@ -2073,7 +2682,11 @@ h3.subtitle{
 	}
 }
 @media screen and (max-width: 991px){
+	body{
+		padding-top: 0;
+	}
 	.header{
+		position: static;
 		.bottom-header{
 			.main-menu{
 				a{
