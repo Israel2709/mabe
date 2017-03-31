@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/jquery-ui.min.css">
-		<link rel="stylesheet" href="css/myAccount.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
@@ -347,7 +346,7 @@
 			</div>
 		</div>
 
-		<div class="page-static">
+		<div class="page-account">
 			<div class="title-bar title-account">
 				<div class="container">
 					<h1>Mi cuenta</h1>
@@ -356,8 +355,8 @@
 			</div>
 
 			<div class="container">
+				<h2 class="title">Navega entre pestañas para acceder a la informaci&oacute;n</h2>
 				<div class="row">
-					<h3 class="title">Navega entre pestañas para acceder a la informaci&oacute;n</h3>
 					<div class="col-md-12 tab-options">
 						<div class="row">
 							<div class="col-md-3">
@@ -380,8 +379,9 @@
 					<div class="form-area">
 						<div class="col-md-4 col-md-offset-4">
 							<label>
-								<span class="grayFont">Ordenar por: </span>
+								<span>Ordenar por: </span>
 								<select>
+									<option></option>
 									<option>Fecha</option>
 								</select>			
 							</label>			
@@ -391,62 +391,69 @@
 
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
-						<table class="table general-table ordersTable">
-							<thead>
-								<tr>
-									<th>Número de la orden</th>
-									<th>Estado de la orden</th>
-									<th>Realizada</th>
-									<th>Total</th>							
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><a href="#">29115836</a></td>
-									<td>En proceso</td>
-									<td>10/03/2017 18:35</td>
-									<td>$89976</td>								
-								</tr>
-								<tr>
-									<td><a href="#">29554716</a></td>
-									<td>En proceso</td>
-									<td>10/03/2017 18:35</td>
-									<td>$43966</td>								
-								</tr>
-								<tr>
-									<td><a href="#">32694083</a></td>
-									<td>En proceso</td>
-									<td>10/03/2017 18:35</td>
-									<td>$10464</td>								
-								</tr>
-								<tr>
-									<td><a href="#">22229163</a></td>
-									<td>En proceso</td>
-									<td>10/03/2017 18:35</td>
-									<td>$45136</td>								
-								</tr>
-								<tr>
-									<td><a href="#">38796817</a></td>
-									<td>En proceso</td>
-									<td>10/03/2017 18:35</td>
-									<td>$9861</td>								
-								</tr>
-								<tr>
-									<td colspan="2" class="page pageText">1 - 5 de 20 ordenes</td>
-									<td colspan="2" class="page">
-										<div class="pagination">
-											<a href="javascript:void(0)" class="pageButton active">1</a>
-											<a href="javascript:void(0)" class="pageButton">2</a>
-											<a href="javascript:void(0)" class="pageButton">3</a>
-											<a href="javascript:void(0)" class="pageButton">4</a>
-											<a href="javascript:void(0)" class="nextButton"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-										</div>
-									</td>
-								</tr>
-							</tbody>							
-						</table>
+						<div class="row">
+							<div class="table-responsive">
+								<table class="table general-table ordersTable">
+									<thead>
+										<tr>
+											<th>Número de la orden</th>
+											<th>Estado de la orden</th>
+											<th>Realizada</th>
+											<th>Total</th>							
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="#">29115836</a></td>
+											<td>En proceso</td>
+											<td>10/03/2017 18:35</td>
+											<td>$89976</td>								
+										</tr>
+										<tr>
+											<td><a href="#">29554716</a></td>
+											<td>En proceso</td>
+											<td>10/03/2017 18:35</td>
+											<td>$43966</td>								
+										</tr>
+										<tr>
+											<td><a href="#">32694083</a></td>
+											<td>En proceso</td>
+											<td>10/03/2017 18:35</td>
+											<td>$10464</td>								
+										</tr>
+										<tr>
+											<td><a href="#">22229163</a></td>
+											<td>En proceso</td>
+											<td>10/03/2017 18:35</td>
+											<td>$45136</td>								
+										</tr>
+										<tr>
+											<td><a href="#">38796817</a></td>
+											<td>En proceso</td>
+											<td>10/03/2017 18:35</td>
+											<td>$9861</td>								
+										</tr>
+									</tbody>							
+								</table>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<p>1 - 5 de 20 ordenes</p>
+							</div>
+							<div class="col-sm-6">
+								<div class="pagination">
+									<a href="javascript:void(0)" class="active">1</a>
+									<a href="javascript:void(0)">2</a>
+									<a href="javascript:void(0)">3</a>
+									<a href="javascript:void(0)">4</a>
+									<a href="javascript:void(0)">&gt;</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				
 			</div>
 			
 		</div>

@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/jquery-ui.min.css">
-		<link rel="stylesheet" href="css/myAccount.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
@@ -347,7 +346,7 @@
 			</div>
 		</div>
 
-		<div class="page-static">
+		<div class="page-account">
 			<div class="title-bar title-account">
 				<div class="container">
 					<h1>Mi cuenta</h1>
@@ -356,8 +355,8 @@
 			</div>
 
 			<div class="container">
+				<h2 class="title">Navega entre pestañas para acceder a la informaci&oacute;n</h2>
 				<div class="row">
-					<h3 class="title">Navega entre pestañas para acceder a la informaci&oacute;n</h3>
 					<div class="col-md-12 tab-options">
 						<div class="row">
 							<div class="col-md-3">
@@ -375,50 +374,52 @@
 						</div>
 					</div>
 				</div>
-				<div class="row page-solicitudservicio">
+				<div class="row">
 					<div class="col-md-10 col-md-offset-1 form-area">
-						<div class="col-md-6">
-							<label>
-								<span>Nombre</span>
-								<input type="text" value="Andrea Buend&iacute;a">
-							</label>
-							<label>
-								<span>Correo electr&oacute;nico</span>
-								<input type="text" value="andrea@gmail.com">
-							</label>
-							<label>
-								<span>Tel&eacute;fono</span>
-								<input type="text" value="55 1234 5678">
-							</label>
-						</div>
-						<div class="col-md-6">
-							<label class="card-number">
-								<span>M&eacute;todo de pago</span>
-								<input type="text" value="**** **** **** 4321">
-								<div class="input-btn card-type"></div>
-								<div class="input-btn card-bank"></div>
-								<div class="input-btn trash-btn"></div>
-							</label>
-							
-							<div class="card-data">
+						<div class="row">
+							<div class="col-md-6">
 								<label>
-									<span>Fecha de vencimiento*</span>
-									<input type="text" value="10 / 2020">
+									<span>Nombre</span>
+									<input type="text">
 								</label>
-								<label class="pull-right">
-									<span>C&oacute;digo de seguridad (CVV)</span>
-									<input type="password" value="487">
+								<label>
+									<span>Correo electr&oacute;nico</span>
+									<input type="text">
 								</label>
-								<a href="javascript:void(0)">Agregar otro m&eacute;todo de pago</a>
+								<label>
+									<span>Tel&eacute;fono</span>
+									<input type="text">
+								</label>
 							</div>
-							<label>
-								<span>Datos de facturaci&oacute;n</span>
-								<input type="text" value="AISU84011218W">
-							</label>
-							<div class="col-md-12">
-								<div class="buttons">
-									<button class="btn btn-blue">Regresar</button>
-									<button class="btn btn-green">Siguiente</button>
+							<div class="col-md-6">
+								<label class="card-number">
+									<span>M&eacute;todo de pago</span>
+									<input type="text">
+									<div class="input-btn card-type"></div>
+									<div class="input-btn card-bank"></div>
+									<div class="input-btn trash-btn"></div>
+								</label>
+								
+								<div class="card-data">
+									<label>
+										<span>Fecha de vencimiento*</span>
+										<input type="text" class="calendar">
+									</label>
+									<label class="pull-right">
+										<span>C&oacute;digo de seguridad (CVV)</span>
+										<input type="password">
+									</label>
+									<a href="javascript:void(0)">Agregar otro m&eacute;todo de pago</a>
+								</div>
+								<label>
+									<span>Datos de facturaci&oacute;n</span>
+									<input type="text">
+								</label>
+								<div class="col-md-12">
+									<div class="buttons">
+										<button class="btn btn-blue">Regresar</button>
+										<button class="btn btn-green">Siguiente</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -512,10 +513,5 @@
 		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
-		<script>
-			$(document).ready(function(){
-				$(".page-solicitudservicio input").focus()
-			})
-		</script>
 	</body>
 </html>
