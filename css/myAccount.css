@@ -122,35 +122,43 @@ table.general-table td {
   font-weight: bold;
   font-size: 18px; }
 
-.page-confirmation .title {
-  border-bottom: none;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  text-align: center; }
-.page-confirmation h3.subtitle {
-  text-align: center;
-  margin-top: 10px;
-  font-weight: bold; }
-  .page-confirmation h3.subtitle.section-title {
-    color: #303030;
-    font-weight: 300;
-    text-align: left; }
-  .page-confirmation h3.subtitle span {
-    color: #13495D; }
-.page-confirmation .detail-area .detail p {
-  text-align: left;
-  font-size: 14px; }
-  .page-confirmation .detail-area .detail p span {
-    color: #b5b5b5;
+.page-confirmation {
+  padding-top: 110px; }
+  .page-confirmation .middle-header {
+    background: none;
+    border: none; }
+  .page-confirmation .logo {
     display: block;
+    margin: 13px auto; }
+  .page-confirmation .title {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: center; }
+  .page-confirmation h3.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold; }
+    .page-confirmation h3.subtitle.section-title {
+      color: #303030;
+      font-weight: 300;
+      text-align: left; }
+    .page-confirmation h3.subtitle span {
+      color: #13495D; }
+  .page-confirmation .detail-area .detail p {
+    text-align: left;
+    font-size: 14px; }
+    .page-confirmation .detail-area .detail p span {
+      color: #b5b5b5;
+      display: block;
+      font-size: 12px;
+      font-weight: 300;
+      margin-bottom: 3px; }
+  .page-confirmation .items .item img {
+    max-width: 100%; }
+  .page-confirmation .items .item .price .amount span {
     font-size: 12px;
-    font-weight: 300;
-    margin-bottom: 3px; }
-.page-confirmation .items .item img {
-  max-width: 100%; }
-.page-confirmation .items .item .price .amount span {
-  font-size: 12px;
-  position: relative;
-  top: -5px; }
+    position: relative;
+    top: -5px; }
 
 /*# sourceMappingURL=myAccount.css.map */
