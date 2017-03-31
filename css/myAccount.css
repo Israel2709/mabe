@@ -154,11 +154,45 @@ table.general-table td {
       font-size: 12px;
       font-weight: 300;
       margin-bottom: 3px; }
-  .page-confirmation .items .item img {
-    max-width: 100%; }
-  .page-confirmation .items .item .price .amount span {
-    font-size: 12px;
-    position: relative;
-    top: -5px; }
+  .page-confirmation .items {
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px; }
+    .page-confirmation .items .item {
+      margin-bottom: 50px; }
+      .page-confirmation .items .item img {
+        max-width: 100%; }
+      .page-confirmation .items .item .price .amount span {
+        font-size: 12px;
+        position: relative;
+        top: -5px; }
+  .page-confirmation .pedido-totales .row {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .page-confirmation .pedido-totales .row .label {
+      font-size: 16px;
+      font-weight: 300;
+      color: #999999;
+      float: left; }
+    .page-confirmation .pedido-totales .row .description {
+      font-size: 16px;
+      color: #999999;
+      font-weight: 300;
+      float: right; }
+      .page-confirmation .pedido-totales .row .description span {
+        font-size: 12px;
+        position: relative;
+        top: -3px; }
+  .page-confirmation .pedido-totales .total .label, .page-confirmation .pedido-totales .total .description {
+    font-weight: 700;
+    color: #000000; }
+  .page-confirmation .pedido-totales .subtotal .label {
+    font-weight: 400; }
+  .page-confirmation .btn {
+    font-size: 16px;
+    padding: 10px 12px; }
+  .page-confirmation .btn-green {
+    min-width: 270px;
+    margin-top: 20px;
+    margin-bottom: 20px; }
 
 /*# sourceMappingURL=myAccount.css.map */
