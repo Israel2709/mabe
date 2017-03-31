@@ -139,6 +139,16 @@ table.general-table td {
 
 
 .page-confirmation{
+	padding-top:110px;
+	.middle-header{
+		background: none;
+		border: none;
+
+	}
+	.logo{	    
+	    display: block;
+	    margin: 13px auto;
+	}
 	.title{
 		border-bottom: none;
 		margin-bottom: 0px;
@@ -158,3 +168,4 @@ table.general-table td {
 		}
 	}
 }
+
