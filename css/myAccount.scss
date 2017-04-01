@@ -193,24 +193,76 @@ table.general-table td {
         }
     }
 
-    .items{
-        .item{
-            margin-bottom:50px;
-            img{
-                max-width: 100%;
-            }
+	.items{
+		border-bottom:1px solid #eaeaea;
+		margin-bottom:30px;
+		.item{
+			margin-bottom:50px;
+			img{
+				max-width: 100%;
+			}
 
-            .price{
-                .amount{
-                    span{
-                        font-size:12px;
-                        position: relative;
-                        top: -5px;
-                    }
-                }
-            }
-        }
-    }
+			.price{
+				.amount{
+					span{
+						font-size:12px;
+						position: relative;
+						top: -5px;
+					}
+				}
+			}
+		}
+	}
+
+	.pedido-totales{
+		.row{
+			margin-top:10px;
+			margin-bottom:10px;
+			.label{
+				font-size: 16px;
+				font-weight: 300;
+				color: #999999;
+				float: left;
+			}
+
+			.description{
+				 font-size: 16px;
+				color: #999999;
+				font-weight: 300;
+				float: right;
+
+				span{
+					font-size:12px;
+					position: relative;
+					top:-3px;
+				}
+			}
+		}
+
+		.total{
+			.label,.description{
+				font-weight: 700;
+				color:#000000;
+			}
+		}
+
+		.subtotal{
+			.label{
+				font-weight: 400;
+			}
+		}
+	}
+
+	.btn{
+		font-size:16px;
+		padding:10px 12px;
+	}
+
+	.btn-green{
+		min-width: 270px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }
 
 .login {
