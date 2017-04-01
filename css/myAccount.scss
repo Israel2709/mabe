@@ -249,7 +249,32 @@ table.general-table td {
 		.subtotal{
 			.label{
 				font-weight: 400;
+                padding-left: 0px;
+                width: 100%;
+                text-align: left;
+                color: #999999;
+                font-size: 16px;
+                font-weight: 300;
+                float: left;
+                padding: 5px 0;
 			}
+            .total,.description.total{
+                font-weight: 700;
+                color:#000000;
+            }
+            .description{
+                 font-size: 16px;
+                color: #999999;
+                font-weight: 300;
+                float: left;
+                width: 100%;
+                padding: 2px 0;
+                span{
+                    font-size:12px;
+                    position: relative;
+                    top:-3px;
+                }
+            }
 		}
 	}
 

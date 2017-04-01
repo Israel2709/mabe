@@ -189,7 +189,29 @@ table.general-table td {
     font-weight: 700;
     color: #000000; }
   .page-confirmation .pedido-totales .subtotal .label {
-    font-weight: 400; }
+    font-weight: 400;
+    padding-left: 0px;
+    width: 100%;
+    text-align: left;
+    color: #999999;
+    font-size: 16px;
+    font-weight: 300;
+    float: left;
+    padding: 5px 0; }
+  .page-confirmation .pedido-totales .subtotal .total, .page-confirmation .pedido-totales .subtotal .description.total {
+    font-weight: 700;
+    color: #000000; }
+  .page-confirmation .pedido-totales .subtotal .description {
+    font-size: 16px;
+    color: #999999;
+    font-weight: 300;
+    float: left;
+    width: 100%;
+    padding: 2px 0; }
+    .page-confirmation .pedido-totales .subtotal .description span {
+      font-size: 12px;
+      position: relative;
+      top: -3px; }
   .page-confirmation .btn {
     font-size: 16px;
     padding: 10px 12px; }
@@ -252,5 +274,3 @@ table.general-table td {
 
 .title-confirmacioncompra {
   background: url(../img/title-confirmacioncompra.png) center center no-repeat; }
-
-/*# sourceMappingURL=myAccount.css.map */
