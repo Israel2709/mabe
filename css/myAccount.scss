@@ -262,7 +262,10 @@ table.general-table td {
 		min-width: 270px;
 		margin-top: 20px;
 		margin-bottom: 20px;
-	}
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	} 
 }
 
 .login {
@@ -317,5 +320,14 @@ table.general-table td {
 }
 .user {
     display: block;
+}
+
+
+.title-solicitudservicio {
+    background: url(../img/title-solicitudservicio.jpg) center center no-repeat;
+}
+
+.title-confirmacioncompra {
+    background: url(../img/title-confirmacioncompra.png) center center no-repeat;
 }
 
